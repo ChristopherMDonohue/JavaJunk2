@@ -1,6 +1,6 @@
 package a2;
 
-/** NetId: nnnnn, nnnnn.
+/** NetId: ekp38, nnnnn.
  * What I thought about this assignment:
  *
  */
