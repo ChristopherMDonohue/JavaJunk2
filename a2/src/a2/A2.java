@@ -65,7 +65,7 @@ public class A2 {
 		return s1 - s2;
 	}
 
-	/** Return true iff (i.e. if and only if) the middle characters of s are the same. <br>
+	/** E: Return true iff (i.e. if and only if) the middle characters of s are the same. <br>
 	 * Note: If s has an odd number of chars, there is ONE middle char, so return true.<br>
 	 * If s has an even number of chars, there are two middle chars, so return true only if they are
 	 * the same.<br>
@@ -91,7 +91,7 @@ public class A2 {
 		throw new UnsupportedOperationException();
 	}
 
-	/** Protect the letters in 'a'..'z' by surrounding them with the corresponding capital letters.
+	/** E: Protect the letters in 'a'..'z' by surrounding them with the corresponding capital letters.
 	 * That is: Return a copy of string s but with all letters in 'a'..'z' surrounded by the
 	 * corresponding upper-case letter. <br>
 	 * Examples: <br>
@@ -117,7 +117,7 @@ public class A2 {
 		throw new UnsupportedOperationException();
 	}
 
-	/** Return s but with all letters in 'a'..'z' moved to the front, and in the same order.<br>
+	/** C: Return s but with all letters in 'a'..'z' moved to the front, and in the same order.<br>
 	 * Examples: <br>
 	 * putLittlesFirst("") = "" <br>
 	 * putLittlesFirst("$") = "$" <br>
@@ -133,7 +133,7 @@ public class A2 {
 		throw new UnsupportedOperationException();
 	}
 
-	/** Precondition: s and s1 are not null. <br>
+	/** C: Precondition: s and s1 are not null. <br>
 	 * Return true iff s contains more than one occurrence of s1. <br>
 	 * Examples: For s = "" and s1 = "", return false <br>
 	 * For s = "a" and s1 = "", return true: <br>
@@ -167,7 +167,7 @@ public class A2 {
 		throw new UnsupportedOperationException();
 	}
 
-	/** Return true iff s and t are anagrams.<br>
+	/** E: Return true iff s and t are anagrams.<br>
 	 * Note: 2 strings are anagrams of each other if swapping the characters<br>
 	 * around in one changes it into the other.<br>
 	 * Note: 'a' and 'A' are different chars, and the space ' ' is a character.
@@ -188,7 +188,7 @@ public class A2 {
 		throw new UnsupportedOperationException();
 	}
 
-	/** Return true iff s consists of x catenated with itself a number of times.<br>
+	/** C: Return true iff s consists of x catenated with itself a number of times.<br>
 	 * Examples: <br>
 	 * For isCat("", "") return true<br>
 	 * For isCat("xxx", "") return false<br>
@@ -218,7 +218,7 @@ public class A2 {
 
 	}
 
-	/** Return the shortest substring x of s such that s = x + x + ... + x. <br>
+	/** C: Return the shortest substring x of s such that s = x + x + ... + x. <br>
 	 * Examples: <br>
 	 * For s = "" return ""<br>
 	 * For s = "xxxxxxxxx" return "x" <br>
