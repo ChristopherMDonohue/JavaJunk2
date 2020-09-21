@@ -1,5 +1,7 @@
 package a2;
 
+import java.util.Arrays;
+
 /** NetId: ekp38, nnnnn.
  * What I thought about this assignment:
  *
@@ -88,7 +90,12 @@ public class A2 {
 		// Principle: Avoid unnecessary case analysis
 		// Principle: Avoid the same expression in several places.
 		// Principle: Keep the structure of the method as simple as possible.
-		throw new UnsupportedOperationException();
+		if s.length()%2 == 0 && s.length != 0 {
+		    return s.charAt(s.length()/2 - 1) == s.charAt(s.length()/2);
+		}
+		else {
+		    return true;
+		}
 	}
 
 	/** E: Protect the letters in 'a'..'z' by surrounding them with the corresponding capital letters.
@@ -114,7 +121,18 @@ public class A2 {
 		 * Look at the last item on this JavaHyperText webpage to see how to do it:
 		 *   https://www.cs.cornell.edu/courses/JavaAndDS/eclipse/Ecl01eclipse.html .
 		 */
-		throw new UnsupportedOperationException();
+		int diff = "A" - "a";
+		if s.length() == 0;{
+		    return s;
+		}
+		char first = (int)s.charAt(0);
+		else if (int)"a" <= first && first <= (int)"z"{
+		    String sandwich = join(first, (char)(first + diff), (char)(first + diff));
+		    return sandwhich + protectLittles(s.substring(1));
+		}
+		else {
+		    return first + protectLittles(s.substring(1));
+		}
 	}
 
 	/** C: Return s but with all letters in 'a'..'z' moved to the front, and in the same order.<br>
@@ -185,7 +203,11 @@ public class A2 {
 		 * Hint: how can a sequence of characters be uniquely ordered? You might
 		 * need to first convert the string into an array of characters and then
 		 * use methods in class Arrays. */
-		throw new UnsupportedOperationException();
+	    char[] S = s.toCharArray();
+	    char[] T = t.toCharArray();
+	    S = Arrays.sort(S);
+		T = Arrays.sort(T);
+		return Arrays.equals(S, T);
 	}
 
 	/** C: Return true iff s consists of x catenated with itself a number of times.<br>

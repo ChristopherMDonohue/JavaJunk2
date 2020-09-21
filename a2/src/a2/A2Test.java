@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 
 class A2Test {
 
-	@Test
+	//@Test
 	void testIsMidSame() {
 		assertEquals(true, A2.isMidSame(""));
 		assertEquals(true, A2.isMidSame("$"));
@@ -25,7 +25,7 @@ class A2Test {
 
 	}
 
-	@Test
+	//@Test
 	void testProtectLittles() {
 		assertEquals("", A2.protectLittles(""));
 		assertEquals("BbB", A2.protectLittles("b"));
@@ -38,7 +38,7 @@ class A2Test {
 			A2.protectLittles("qrstuvwxyz"));
 	}
 
-	@Test
+	//@Test
 	void putLittlesFirst() {
 		assertEquals("", A2.putLittlesFirst(""));
 		assertEquals("%", A2.putLittlesFirst("%"));
@@ -53,7 +53,7 @@ class A2Test {
 
 	}
 
-	@Test
+	//@Test
 	void testMoreThan1() {
 		assertEquals(false, A2.moreThan1("", ""));
 		assertEquals(true, A2.moreThan1("a", ""));
@@ -81,12 +81,12 @@ class A2Test {
 		assertEquals(false, A2.areAnagrams("a", "A"));
 	}
 
-	@Test
+	//@Test
 	void testIsCat() {
 		// TODO Put code her to test function isCat.
 	}
 
-	@Test
+	//@Test
 	void testFindShortest() {
 		assertEquals("", A2.findShortest(""));
 		// TODO Put code her to test function findShortest.
