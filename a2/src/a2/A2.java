@@ -122,17 +122,22 @@ public class A2 {
 		 *   https://www.cs.cornell.edu/courses/JavaAndDS/eclipse/Ecl01eclipse.html .
 		 */
 		int diff = "A" - "a";
+		String newString = ""
 		if s.length() == 0;{
-		    return s;
-		}
-		char first = (int)s.charAt(0);
-		else if (int)"a" <= first && first <= (int)"z"{
-		    String sandwich = join(first, (char)(first + diff), (char)(first + diff));
-		    return sandwhich + protectLittles(s.substring(1));
+		    return newString;
 		}
 		else {
-		    return first + protectLittles(s.substring(1));
-		}
+		    for(int  i = 0, i < s.length(), 1) {
+		        if (int)s.charAt(i) <= (int)"z" && (int)s.charAt(i) >= (int)"a"){
+		            capital = (char)((int)s.charAt(i) + diff);
+		            newString = newString + capital + s.charAt(i) + capital;
+		        }
+		        else {
+		            newString = newString + s.charAt(i);
+		        }
+		    }
+		    return newString
+		}	    
 	}
 
 	/** C: Return s but with all letters in 'a'..'z' moved to the front, and in the same order.<br>
