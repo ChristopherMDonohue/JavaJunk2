@@ -148,21 +148,22 @@ public class A2 {
     public static String putLittlesFirst(String s) {
         // TODO 3. The same things about the UTF-8 encoding discussed in
         // the previous method addCapsToSmalls apply here also.
-        String s2="";
+        String littles="";
+    	String other="";
         if (s.length()==0) {
-        	return s2;
+        	return other;
         }
         else {
         	for(int i=0;i<s.length();i++) {
         		char l=s.charAt(i);
-        		if (l<='z'&&l>='a') {
-        			s2=l+s2;
+        		if (l<='z' && l>='a') {
+        			littles+=l;
         		}
         		else {
-        			s2+=l;
+        			other+=l;
         		}
         	}
-        	return s2;
+        	return littles+other;
         }
     }
 
@@ -197,12 +198,12 @@ public class A2 {
         // int k= s.indexOf(s1);
         // ...
         // }
-        if (s.equals(s1)&&s1.equals("")) {
-        	return false;
+        if (s1.equals("")) {
+        	return !s.equals("");
         }
         else {
         	if (s.contains(s1)) {
-            	int i=s.indexOf(s1)+s1.length();
+            	int i=s.indexOf(s1)+1;
             	if (i<s.length()) {
             		String s2=s.substring(i);
                 	return s2.contains(s1);
@@ -314,8 +315,8 @@ public class A2 {
         // to return.
 
         // 3. Note that isCat(s, s) = 1, for any s.
-    	String x = null;
-		for(int i=0;i<s.length();i++) {
+    	String x = "";
+		for(int i=0;i<=s.length();i++) {
 			x=s.substring(0,i);
 			if (isCat(s,x)) {
 				return x;
