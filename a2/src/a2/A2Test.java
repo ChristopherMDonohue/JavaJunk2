@@ -84,12 +84,37 @@ class A2Test {
     @Test
     void testIsCat() {
         // TODO Put code her to test function isCat.
+    	assertEquals(true,A2.isCat("", "")); 
+		assertEquals(false,A2.isCat("xxx", "")); 
+		assertEquals(true,A2.isCat("x", "x"));
+		assertEquals(true,A2.isCat("", "x"));
+		assertEquals(true,A2.isCat("xx", "x"));
+		assertEquals(false,A2.isCat("ccbbbb", "bb")); 
+		assertEquals(false,A2.isCat("bbbbcc", "bb"));
+		assertEquals(true,A2.isCat("bbbbbb", "bb"));
+		assertEquals(true,A2.isCat("bbbbbb", "bbb")); 
+		assertEquals(false,A2.isCat("bbbbbb", "bbbb"));
+		assertEquals(false,A2.isCat("bbbbbb", "bbbbb"));
+		assertEquals(true,A2.isCat("bbbbbb", "bbbbbb"));
+		assertEquals(true,A2.isCat("bbbbbb", "bbbbbbb"));
+		assertEquals(true,A2.isCat("xyzxyz", "xyz"));
+		assertEquals(true,A2.isCat("xyzxyz", "xyzxyz")); 
+		String s="Christopher M. Donohue";
+		assertEquals(true,A2.isCat(s, s));
     }
 
     @Test
     void testFindShortest() {
         assertEquals("", A2.findShortest(""));
         // TODO Put code her to test function findShortest.
+		assertEquals("", A2.findShortest(""));
+		assertEquals(A2.findShortest("xxxxxxxxx"),"x");
+		assertEquals(A2.findShortest("xyxyxyxy"),"xy");
+		assertEquals(A2.findShortest("012012012012"),"012");
+		assertEquals(A2.findShortest("hellohellohello"),"hello");
+		assertEquals(A2.findShortest("hellohelloworld"),"hellohelloworld");
+		assertEquals(A2.findShortest("hellohell"),"hellohell");
+
 
     }
 

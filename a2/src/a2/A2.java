@@ -2,7 +2,7 @@ package a2;
 
 import java.util.Arrays;
 
-/** NetId: ekp38, nnnnn.
+/** NetId: ekp38, cmd298.
  * What I thought about this assignment:
  *
  */
@@ -148,7 +148,22 @@ public class A2 {
     public static String putLittlesFirst(String s) {
         // TODO 3. The same things about the UTF-8 encoding discussed in
         // the previous method addCapsToSmalls apply here also.
-        throw new UnsupportedOperationException();
+        String s2="";
+        if (s.length()==0) {
+        	return s2;
+        }
+        else {
+        	for(int i=0;i<s.length();i++) {
+        		char l=s.charAt(i);
+        		if (l<='z'&&l>='a') {
+        			s2=l+s2;
+        		}
+        		else {
+        			s2+=l;
+        		}
+        	}
+        	return s2;
+        }
     }
 
     /** C: Precondition: s and s1 are not null. <br>
@@ -182,7 +197,26 @@ public class A2 {
         // int k= s.indexOf(s1);
         // ...
         // }
-        throw new UnsupportedOperationException();
+        if (s.equals(s1)&&s1.equals("")) {
+        	return false;
+        }
+        else {
+        	if (s.contains(s1)) {
+            	int i=s.indexOf(s1)+s1.length();
+            	if (i<s.length()) {
+            		String s2=s.substring(i);
+                	return s2.contains(s1);
+            	}
+            	else {
+            		return false;
+            	}
+            	
+            }
+            else {
+            	return false;
+            }
+        }
+    	
     }
 
     /** E: Return true iff s and t are anagrams.<br>
@@ -236,7 +270,25 @@ public class A2 {
         // Hint: Follow this Principle:
         // Make the structure of a loop reflect the structure of the data it processes.
         // Use function equals, not ==, to test equality of strings.
-        throw new UnsupportedOperationException();
+    	if (s.equals("")&&x.equals("")) {
+			return true;
+		}
+		else if(x.length()==0) {
+			return false;
+		}
+		else {
+			if (s.length()%x.length()!=0) {
+				return false;
+			}
+			else {
+				String z="";
+				for (int i=0;i<s.length()/x.length();i++) {
+					z+=x;	
+				}
+				return s.equals(z);
+			}
+		}
+
 
     }
 
@@ -262,6 +314,13 @@ public class A2 {
         // to return.
 
         // 3. Note that isCat(s, s) = 1, for any s.
-        throw new UnsupportedOperationException();
+    	String x = null;
+		for(int i=0;i<s.length();i++) {
+			x=s.substring(0,i);
+			if (isCat(s,x)) {
+				return x;
+			}
+		}
+		return x;
     }
 }
