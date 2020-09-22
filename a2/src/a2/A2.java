@@ -148,22 +148,20 @@ public class A2 {
     public static String putLittlesFirst(String s) {
         // TODO 3. The same things about the UTF-8 encoding discussed in
         // the previous method addCapsToSmalls apply here also.
-        String littles="";
-    	String other="";
-        if (s.length()==0) {
-        	return other;
-        }
-        else {
-        	for(int i=0;i<s.length();i++) {
-        		char l=s.charAt(i);
-        		if (l<='z' && l>='a') {
-        			littles+=l;
-        		}
-        		else {
-        			other+=l;
-        		}
-        	}
-        	return littles+other;
+        String littles= "";
+        String other= "";
+        if (s.length() == 0) {
+            return other;
+        } else {
+            for (int i= 0; i < s.length(); i++ ) {
+                char l= s.charAt(i);
+                if (l <= 'z' && l >= 'a') {
+                    littles+= l;
+                } else {
+                    other+= l;
+                }
+            }
+            return littles + other;
         }
     }
 
@@ -199,25 +197,31 @@ public class A2 {
         // ...
         // }
         if (s1.equals("")) {
-        	return !s.equals("");
-        }
-        else {
-        	if (s.contains(s1)) {
-            	int i=s.indexOf(s1)+1;
-            	if (i<s.length()) {
-            		String s2=s.substring(i);
-                	return s2.contains(s1);
-            	}
-            	else {
-            		return false;
-            	}
-            	
+            return !s.equals("");
+        } else {
+            // int i=s.indexOf(s1)
+            // if (i != -1) {
+            // if (i + 1 < s.length()) {
+            // String s2=s.substring(i + 1);
+            // return s2.contains(s1);
+            // }
+            // }
+            // only one s1.indexOf/contains in the above?
+            if (s.contains(s1)) {
+                int i= s.indexOf(s1) + 1;
+                if (i < s.length()) {
+                    String s2= s.substring(i);
+                    return s2.contains(s1);
+
+                } else {
+                    return false;
+                }
+
+            } else {
+                return false;
             }
-            else {
-            	return false;
-            }
         }
-    	
+
     }
 
     /** E: Return true iff s and t are anagrams.<br>
@@ -271,25 +275,21 @@ public class A2 {
         // Hint: Follow this Principle:
         // Make the structure of a loop reflect the structure of the data it processes.
         // Use function equals, not ==, to test equality of strings.
-    	if (s.equals("")&&x.equals("")) {
-			return true;
-		}
-		else if(x.length()==0) {
-			return false;
-		}
-		else {
-			if (s.length()%x.length()!=0) {
-				return false;
-			}
-			else {
-				String z="";
-				for (int i=0;i<s.length()/x.length();i++) {
-					z+=x;	
-				}
-				return s.equals(z);
-			}
-		}
-
+        if (s.equals("") && x.equals("")) {
+            return true;
+        } else if (x.length() == 0) {
+            return false;
+        } else {
+            if (s.length() % x.length() != 0) {
+                return false;
+            } else {
+                String z= "";
+                for (int i= 0; i < s.length() / x.length(); i++ ) {
+                    z+= x;
+                }
+                return s.equals(z);
+            }
+        }
 
     }
 
@@ -315,13 +315,11 @@ public class A2 {
         // to return.
 
         // 3. Note that isCat(s, s) = 1, for any s.
-    	String x = "";
-		for(int i=0;i<=s.length();i++) {
-			x=s.substring(0,i);
-			if (isCat(s,x)) {
-				return x;
-			}
-		}
-		return x;
+        String x= "";
+        for (int i= 0; i <= s.length(); i++ ) {
+            x= s.substring(0, i);
+            if (isCat(s, x)) { return x; }
+        }
+        return x;
     }
 }
