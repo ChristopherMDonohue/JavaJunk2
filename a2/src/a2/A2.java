@@ -198,21 +198,20 @@ public class A2 {
         // }
         if (s1.equals("")) {
             return !s.equals("");
-            
+
         } else {
-        	
-        	int i= s.indexOf(s1);
-        	
-            if (s.contains(s1)&& i + 1 < s.length()) {
-            	String s2=s.substring(i + 1);
+
+            int i= s.indexOf(s1);
+
+            if (i != -1 && i + 1 < s.length()) {
+                String s2= s.substring(i + 1);
                 return s2.contains(s1);
-                
-                } else {
-                    return false;
-                }
-        	}
-    	}
-    
+
+            } else {
+                return false;
+            }
+        }
+    }
 
     /** E: Return true iff s and t are anagrams.<br>
      * Note: 2 strings are anagrams of each other if swapping the characters<br>
