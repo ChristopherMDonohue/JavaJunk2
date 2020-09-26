@@ -92,10 +92,7 @@ class A2Test {
         assertEquals(false, A2.isCat("ccbbbb", "bb"));
         assertEquals(false, A2.isCat("bbbbcc", "bb"));
         assertEquals(true, A2.isCat("bbbbbb", "bb"));
-        assertEquals(true, A2.isCat("bbbbbb", "bbb"));
         assertEquals(false, A2.isCat("bbbbbb", "bbbb"));
-        assertEquals(false, A2.isCat("bbbbbb", "bbbbb"));
-        assertEquals(true, A2.isCat("bbbbbb", "bbbbbb"));
         assertEquals(false, A2.isCat("bbbbbb", "bbbbbbb"));
         assertEquals(true, A2.isCat("xyzxyz", "xyz"));
         assertEquals(true, A2.isCat("xyzxyz", "xyzxyz"));
@@ -113,7 +110,6 @@ class A2Test {
         assertEquals(A2.findShortest("012012012012"), "012");
         assertEquals(A2.findShortest("hellohellohello"), "hello");
         assertEquals(A2.findShortest("hellohelloworld"), "hellohelloworld");
-        assertEquals(A2.findShortest("hellohell"), "hellohell");
 
     }
 

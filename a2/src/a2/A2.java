@@ -43,7 +43,7 @@ public class A2 {
      * Example: for 3 hours 15 minutes, use 3.25<br>
      * Example: for 4 hours 30 minutes, use 4.50<br>
      * Example: for 5 hours, use 5 or 5.0 */
-    public static double timeSpent= -1;
+    public static double timeSpent= 4.04;
 
     /** Return either s1 + s2 or s1 - s2, depending on b. <br>
      * If b is true, return the sum, otherwise return the difference. */
