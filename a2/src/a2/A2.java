@@ -6,7 +6,9 @@ import java.util.Arrays;
  * What I thought about this assignment:
  *
  */
-
+/** easier than expected once we realized that most of the problems were pretty <br>
+ * similar.
+ */
 /** A collection of static functions. <br>
  * All methods assume that String parameters are non-null.
  *
